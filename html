@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electron Configuration Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-atom"></i> Electron Configuration Tool</h1>
+            <p class="subtitle">Visualize and understand electron configurations of elements</p>
+        </header>
+
+        <div class="main-content">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="element-input"><i class="fas fa-search"></i> Enter Element:</label>
+                    <div class="input-with-button">
+                        <input type="text" id="element-input" placeholder="Element name, symbol, or atomic number">
+                        <button id="search-btn">Configure</button>
+                    </div>
+                    <div class="examples">
+                        <span>Examples:</span>
+                        <button class="example-btn" data-element="H">Hydrogen</button>
+                        <button class="example-btn" data-element="Na">Sodium</button>
+                        <button class="example-btn" data-element="Fe">Iron</button>
+                        <button class="example-btn" data-element="Ag">Silver</button>
+                    </div>
+                </div>
+
+                <div class="element-info" id="element-info">
+                    <div class="placeholder">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Enter an element to see its electron configuration</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <h2><i class="fas fa-code"></i> Electron Configuration</h2>
+                <div class="configuration-display" id="configuration-display">
+                    <div class="placeholder">
+                        <i class="fas fa-sliders-h"></i>
+                        <p>Configuration will appear here</p>
+                    </div>
+                </div>
+
+                <div class="element-details" id="element-details">
+                    <div class="details-header">
+                        <h3><i class="fas fa-info-circle"></i> Element Information</h3>
+                    </div>
+                    <div class="details-content">
+                        <p>Search for an element to see details here</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reference-section">
+                <h3><i class="fas fa-book"></i> Quick Reference</h3>
+                <div class="reference-content">
+                    <div class="reference-item">
+                        <h4>Orbital Order</h4>
+                        <div class="orbital-order">
+                            <span class="orbital-tag">1s</span> → 
+                            <span class="orbital-tag">2s</span> → 
+                            <span class="orbital-tag">2p</span> → 
+                            <span class="orbital-tag">3s</span> → 
+                            <span class="orbital-tag">3p</span> → 
+                            <span class="orbital-tag">4s</span> → 
+                            <span class="orbital-tag">3d</span> → 
+                            <span class="orbital-tag">4p</span>
+                        </div>
+                        <p class="small-text">Follows Aufbau principle</p>
+                    </div>
+                    <div class="reference-item">
+                        <h4>Electron Capacity</h4>
+                        <div class="capacity-grid">
+                            <div class="capacity-item">s: 2 e⁻</div>
+                            <div class="capacity-item">p: 6 e⁻</div>
+                            <div class="capacity-item">d: 10 e⁻</div>
+                            <div class="capacity-item">f: 14 e⁻</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Electron Configuration Tool • Created for Chemistry Education</p>
+            <p><a href="#" id="reset-btn">Reset</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
